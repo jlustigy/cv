@@ -6,7 +6,11 @@
 \setlength{\textwidth}{6in} % set width of text portion
 \newcommand{\code}[1]{\texttt{#1}}
 \usepackage{hyperref}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[dvipsnames]{xcolor}
+
+\definecolor{MidnightBlue}{RGB}{10,82,131} % This replaces the need for xcolor package
+
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
     linkcolor=red,          % color of internal links (change box color with linkbordercolor)
