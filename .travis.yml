@@ -8,6 +8,8 @@ before_install:
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 install:
 # Latex requirements
+- PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+- tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
 - tlmgr update --self
 - tlmgr install xcolor
 script:
