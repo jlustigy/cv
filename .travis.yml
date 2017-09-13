@@ -1,8 +1,8 @@
 sudo: required
 dist: trusty
 branches:
-  except:
-  - pdf
+  only:
+  - master
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
@@ -17,7 +17,7 @@ script:
 - pdflatex -interaction=nonstopmode -halt-on-error cv.tex
 - pdflatex -interaction=nonstopmode -halt-on-error cv.tex
 after_success:
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
+- test $TRAVIS_BRANCH == "master" && bash
   deploy.sh
 env:
   global:
