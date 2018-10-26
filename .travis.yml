@@ -12,6 +12,16 @@ before_install:
 #- tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
 #- tlmgr update --self
 #- tlmgr install xcolor
+addons:
+    apt:
+        packages:
+            - texlive-xetex
+            - texlive-latex-recommended
+            - texlive-latex-extra
+            - texlive-fonts-recommended
+            - texlive-fonts-extra
+            - latex-xcolor
+            - lmodern
 script:
 - mkdir _build
 - pdflatex -interaction=nonstopmode -halt-on-error cv.tex
