@@ -1,5 +1,3 @@
-LATEX       = xelatex
-
 sudo: required
 dist: trusty
 branches:
@@ -26,8 +24,8 @@ addons:
             - lmodern
 script:
 - mkdir _build
-- ${LATEX} -interaction=nonstopmode -halt-on-error cv.tex
-- ${LATEX} -interaction=nonstopmode -halt-on-error cv.tex
+- xelatex -interaction=nonstopmode -halt-on-error cv.tex
+- xelatex -interaction=nonstopmode -halt-on-error cv.tex
 after_success:
 - test $TRAVIS_BRANCH == "master" && bash
   deploy.sh
