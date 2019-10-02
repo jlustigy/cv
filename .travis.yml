@@ -5,7 +5,7 @@ branches:
   - master
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended pgf
 #install:
 # Latex requirements
 #- PATH=$HOME/texlive/bin/x86_64-linux:$PATH
@@ -22,7 +22,6 @@ addons:
             - texlive-fonts-extra
             - latex-xcolor
             - lmodern
-            - texlive-pgf
 script:
 - mkdir _build
 - xelatex -interaction=nonstopmode -halt-on-error cv.tex
