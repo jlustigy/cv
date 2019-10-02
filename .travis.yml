@@ -22,7 +22,7 @@ addons:
             - texlive-fonts-extra
             - latex-xcolor
             - lmodern
-            - miktex-pgf
+            - miktex-etex-base
 script:
 - mkdir _build
 - xelatex -interaction=nonstopmode -halt-on-error cv.tex
