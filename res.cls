@@ -353,7 +353,7 @@
 		 % insert the contents of the vbox.
     \vtop to 0pt{% make a 0pt height paragraph, with the baseline at the
 		 % lined up with the baseline of the first box in the list
-      \leftskip=0pt
+      \leftskip=1pt
       \hsize=\sectionwidth
       \textwidth=\sectionwidth
       \raggedright     % you don't want this filled out to the right margin
@@ -793,6 +793,27 @@
 \itemsep \parsep}
 
 \pagestyle{empty}  % don't want page numbers
+%\pagestyle{fancy}
+
+% Add fancy footer line with circled page number
+%\usepackage{fancyhdr}
+%\usepackage{lipsum}
+%\usepackage{tikz}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\newcommand*\circled[1]{\tikz[baseline]{\node[shape=circle,draw,inner sep=2pt, line width=1pt] (char) {#1};}}
+%\fancyfoot[C]{\moveleft\hoffset \hbox{\vbox{\hrule width 0.465\resumewidth height 1pt} \hspace{-2.5mm} \protect\circled{\thepage} \hspace{-2.5mm} \vbox{\hrule width 0.465\resumewidth height 1pt}}}
+%\renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+%\footskip = 5pt
+
+% Apply same footer style to titlepage
+%\fancypagestyle{plain}{%
+%  \fancyhf{}
+%  \fancyfoot[C]{\hrulefill \protect\circled{\thepage}\hrulefill}
+%  \newcommand*\circled[1]{\tikz[baseline]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%  \chead{\large\titletwo}
+%  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+%}
 
 \begin{format}
 \title{l}\employer{r}\\

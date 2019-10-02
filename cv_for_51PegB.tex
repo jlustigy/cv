@@ -1,0 +1,168 @@
+% LaTeX resume using res.cls
+\documentclass[margin,10pt]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\setlength{\textwidth}{6in} % set width of text portion
+\newcommand{\code}[1]{\texttt{#1}}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{easylist}
+
+\definecolor{MidnightBlue}{RGB}{10,82,131} % This replaces the need for xcolor package
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=MidnightBlue           % color of external links
+}
+
+\usepackage{enumitem}
+\setlist[itemize,1]{leftmargin=\dimexpr 26pt-3mm}
+
+\newenvironment{benumerate}[1]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}
+}{
+    \end{enumerate}
+}
+
+\begin{document}
+
+%% Center the name over the entire width of resume:
+\moveleft.5\hoffset\centerline{\textsc{\Large Jacob Lustig-Yaeger}}
+\moveleft.5\hoffset\centerline{Curriculum Vitae}
+%
+%% Draw a horizontal line the whole width of resume:
+\moveleft\hoffset\vbox{\hrule width 0.93\resumewidth height 1pt}
+\vspace{-12pt}
+\hspace{-1in}
+\begin{minipage}[t]{0.93\resumewidth}
+Email: \href{mailto:jlustigy@uw.edu}{jlustigy@uw.edu} \hfill GitHub: \href{https://github.com/jlustigy}{jlustigy}\\
+Web: \url{http://staff.washington.edu/jlustigy/}
+\end{minipage}
+
+
+%% Select character to use as the bullet marker. 
+%% Comment out to get normal dark filled circle bullets
+\def\labelitemi{---}	
+
+\begin{resume}
+
+\section{Office \\Address}
+Department of Astronomy, University of Washington \\
+Physics-Astronomy Bldg, B319 \\
+Box 351580 \\
+Seattle, WA 98195-1580 \\
+
+\section{Education} 
+Ph.D. Candidate in Astronomy and Astrobiology (dual-title PhD program) \hfill (2014 -- Present) \\
+University of Washington, Seattle, WA  \\
+\textit{Advisor:} Victoria Meadows 
+
+M. Sci. in Astronomy \hfill (2014 -- 2016) \\
+University of Washington, Seattle, WA 
+
+B.S.\ in Physics (Honors), Minor in Mathematics \hfill (2009 -- 2013) \\
+University of California, Santa Cruz, CA \\
+\textit{Advisor:} Jonathan Fortney \\
+
+\section{Research \\Interests}
+                \begin{itemize}  \itemsep -1pt %reduce space between items
+                        \item Characterizing terrestrial exoplanets for habitability and signs of life 
+                        \item Retrieving terrestrial planet atmospheres using Bayesian statistics 
+                        \item Modeling telescope sensitivity to motivate future exoplanet science cases 
+                        \item Developing novel methods to detect exoplanet habitability and biosignatures \\
+                    \end{itemize}
+
+\section{Research \\Experience} 
+                {\sl Graduate Research Assistant}: Virtual Planetary Laboratory   \hfill (Sept 2014 -- Present)\\
+                Terrestrial exoplanets, their atmospheres, habitability \& biosignatures
+                    \begin{itemize}  \itemsep -1pt %reduce space between items
+                        \item Developed, tested, and applied a physically rigorous terrestrial exoplanet retrieval model  
+                        \item Simulated and analyzed radiative transfer, photochemical, climate, telescope, surface mapping, and machine learning models
+                    \end{itemize}  
+
+                {\sl Undergraduate \& Postbaccalaureate Researcher}: University of California, Santa Cruz \hfill          (2012 -- 2014)\\
+                Hot Jupiter \& brown dwarf atmospheres, opacity sources, and atmospheric retrieval 
+                    \begin{itemize}  \itemsep -1pt %reduce space between items
+                        \item Retrieved exoplanet atmospheric compositions using emission spectra 
+                        \item Applied Bayesian methods for parameter estimation 
+                        \item Calculated and published weighted mean opacities for substellar and planetary atmospheres\\
+                    \end{itemize} 
+   
+\section{Teaching \\Experience} 
+                {\sl Research Mentor}: Department of Astronomy, University of Washington \hfill (Sept 2016 -- Present)\\
+                Advising undergraduate students in exoplanet astronomy and astrobiology research\\
+                \\
+                %    \begin{itemize}  \itemsep -1pt %reduce space between items
+                %        \item Guadalupe Tovar (UW Undergraduate)
+                %    \end{itemize}
+                {\sl Teaching Assistant}: Department of Astronomy, University of Washington   \hfill          (Sept 2014 -- June 2015)\\
+                Led two biweekly sections for undergraduate students
+                    \begin{itemize}  \itemsep -1pt %reduce space between items
+                        \item ASTR 101 (Spring 2015; Autumn 2014)
+                        \item ASTR 150 (Winter 2015)
+                    \end{itemize}  
+                
+                {\sl Math \& Writing Tutor}: Learning Support Services, UCSC   \hfill          (Sept 2010 -- June 2012)\\
+                Instructed students in college level mathematics and writing as a group and drop-in tutor\\
+                 
+                                  
+\section{Honors \\ \& Awards}
+                 \begin{itemize}  \itemsep -1pt %reduce space between items
+                    %\item Astrobiology Fellow at University of Washington Astrobiology Program (2014)
+                    \item Honors undergraduate thesis in physics (2013)
+                    \item University Honor, \textit{cum laude} at University of California, Santa Cruz (2013)\\
+                 \end{itemize}  
+                 
+\section{Technical \\Skills} 
+                \begin{itemize}  \itemsep -1pt %reduce space between items
+                    \item Programming in Python, Julia, IDL, \& Fortran
+                    \item Packaging Python code for open-source distribution
+                    \item Inferring model parameters from data using Bayesian statistics
+                    \item Version control and collaboration with git \& GitHub
+                    \item Data visualization with Matplotlib, Tableau, \& Bokeh  
+                    \item Writing and typesetting with \LaTeX 
+                    \item Comprehensive experience with MS Office Suite \\
+                \end{itemize}
+
+\section{Selected \\Publications} 
+                {\sl First Authored (3 + 2 in prep)}
+                \begin{itemize}
+                    \item \textbf{Lustig-Yaeger, J.}, Robinson, T. D., \& Arney, G. (2019). \href{https://doi.org/10.21105/joss.01387}{``\texttt{coronagraph}: Telescope Noise Modeling for Exoplanets in Python''}. \textit{Journal of Open Source Software}, 4(40), 1387.
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P. (2019). \href{https://doi.org/10.3847/1538-3881/ab21e0}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. \textit{The Astronomical Journal}, 158(1), 27.
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., Tovar Mendoza, G., Schwieterman, E. W., Fujii, Y., Luger, R., \&  Robinson, T. D. (2018). \href{https://doi.org/10.3847/1538-3881/aaed3a}{``Detecting Ocean Glint on Exoplanets Using Multiphase Mapping''}. \textit{The Astronomical Journal}, 156(6), 301.
+                \end{itemize}
+                {\sl Co-Authored (11 + 1 submitted + 3 in prep)} % rocky3d, 3d eclipse mapping, o2 FP in HR, trappist1 biosigs, 
+                \begin{itemize}
+                    \item Lincowski, A. P., \textbf{Lustig-Yaeger, J.}, \& Meadows, V. S.  (2019). \href{https://doi.org/10.3847/1538-3881/ab2385}{``Observing Isotopologue Bands in Terrestrial Exoplanet Atmospheres with the James Webb Space Telescope---Implications for Identifying Past Atmospheric and Ocean Loss''}. \textit{The Astronomical Journal}, 158(1), 26.\\
+                \end{itemize}
+                 
+                 
+\section{Selected \\Presentations} 
+                {\sl Invited Talks (2 + 2 upcoming)}
+                \begin{itemize}
+                    \item \textbf{Lustig-Yaeger, J.} \& Meadows, V. S.\ (2019, \textit{upcoming}). 
+                    \href{}{``The Era of Terrestrial Exoplanet Characterization''}. AGU, AGU-AAS joint exoplanet session, San Francisco, CA, 10 Dec. 
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019, \textit{upcoming}). \href{https://seec.gsfc.nasa.gov/Symposium.html}{``Prospects for Biosignatures for Rocky Planets in the Era of JWST''}. SEEC Symposium 2019, ``Rocky Exoplanets in the Era of JWST: Theory and Observation'', NASA Goddard, Greenbelt, MD, 5 Nov. 
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). \href{https://exoplanets.nasa.gov/exep/events/270/exopag-20/}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. ExoPAG 20, Bellevue, WA, 23 Jun.
+                \end{itemize}
+                {\sl Contributed Talks (7)}
+                \begin{itemize}
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). ``Detecting and Characterizing Terrestrial Atmospheres in the TRAPPIST-1 System with JWST''. TRAPPIST-1 Conference, Li\`ege, Belgium, 11-14 Jun. \\
+                \end{itemize}
+                 
+\section{Press}
+                \begin{itemize}  
+                    \item University of Washington, Seattle. (2019, August 13). \href{https://www.washington.edu/news/2019/08/13/james-webb-space-telescope-could-begin-learning-about-trappist-1-atmospheres-in-a-single-year-study-indicates/}{``James Webb Space Telescope could begin learning about TRAPPIST-1 atmospheres in a single year, study indicates''} [Press release]. 
+                 \end{itemize}
+
+\end{resume}
+\end{document}

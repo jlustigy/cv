@@ -32,6 +32,18 @@
     \end{enumerate}
 }
 
+% Add fancy footer line with circled page number
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhf{}
+\newcommand*\circled[1]{\tikz[baseline]{\node[shape=circle,draw,inner sep=2pt, line width=1pt] (char) {#1};}}
+\fancyfoot[C]{\moveleft\hoffset \hbox{\vbox{\hrule width 0.465\resumewidth height 1pt} \hspace{-2.5mm} \protect\circled{\thepage} \hspace{-2.5mm} \vbox{\hrule width 0.44\resumewidth height 1pt}}}
+%\fancyfoot[C]{\moveleft\hoffset \hbox{\vbox{\hrule width 0.465\resumewidth height 0pt} \hspace{-2.5mm} \protect\circled{\thepage} \hspace{-2.5mm} \vbox{\hrule width 0.465\resumewidth height 0pt}}}
+\renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+\footskip = 5pt
+
 \begin{document}
 
 %% Center the name over the entire width of resume:
@@ -61,55 +73,57 @@ Box 351580 \\
 Seattle, WA 98195-1580 \\
 
 \section{Education} 
-University of Washington, Seattle, WA \hfill 2014 -- Present\\
-Graduate student in Astronomy and Astrobiology (dual-title PhD program)  
+Ph.D. Candidate in Astronomy \& Astrobiology (dual-title PhD program) \hfill (2014 -- Present) \\
+University of Washington, Seattle, WA  \\
+\textit{Advisor:} Victoria Meadows 
 
-University of Washington, Seattle, WA \hfill 2014 -- 2016\\
-M. Sci. in Astronomy
+M. Sci. in Astronomy \hfill (2014 -- 2016) \\
+University of Washington, Seattle, WA 
 
-University of California, Santa Cruz, CA  \hfill 2009 -- 2013\\
-B.S.\ with Honors in Physics \\
-Minor in Mathematics\\
+B.S.\ in Physics (Honors), Minor in Mathematics \hfill (2009 -- 2013) \\
+University of California, Santa Cruz, CA \\
+\textit{Advisor:} Jonathan Fortney \\
+
+\section{Research \\Interests}
+                \begin{itemize}  \itemsep -1pt %reduce space between items
+                        \item Characterizing terrestrial exoplanets for habitability and signs of life 
+                        \item Retrieving terrestrial planet atmospheres using Bayesian statistics 
+                        \item Modeling telescope sensitivity to motivate future exoplanet science cases 
+                        \item Developing novel methods to detect exoplanet habitability and biosignatures \\
+                    \end{itemize}
 
 \section{Research \\Experience} 
-                {\sl Graduate Research Assistant}: Virtual Planetary Laboratory   \hfill          Sept 2014 -- Present\\
-                Extrasolar planets, their atmospheres, \& habitability with Dr. Victoria Meadows
+                {\sl Graduate Research Assistant}: Virtual Planetary Laboratory   \hfill (Sept 2014 -- Present)\\
+                Terrestrial exoplanets, their atmospheres, habitability \& biosignatures
                     \begin{itemize}  \itemsep -1pt %reduce space between items
-                        \item Lead developer of a retrieval model for the analysis of terrestrial exoplanet spectra 
-                        \item Experience simulating and analyzing radiative transfer, photochemical, climate, telescope noise, and exoplanet mapping models
-                        \item Programming in Python, Julia, IDL, \& Fortran
+                        \item Developed, tested, and applied a physically rigorous terrestrial exoplanet retrieval model  
+                        \item Simulated and analyzed radiative transfer, photochemical, climate, telescope, surface mapping, and machine learning models
                     \end{itemize}  
 
-                {\sl Junior Specialist}: University of California, Santa Cruz \hfill          Dec 2013 -- Aug 2014\\
-                Hot Jupiter atmospheres with Dr. Jonathan Fortney and Dr. Michael Line
+                {\sl Undergraduate \& Postbaccalaureate Researcher}: University of California, Santa Cruz \hfill          (2012 -- 2014)\\
+                Hot Jupiter \& brown dwarf atmospheres, opacity sources, and atmospheric retrieval 
                     \begin{itemize}  \itemsep -1pt %reduce space between items
-                        \item Wrote Python code to analyze the emission spectra of exoplanets observed during secondary eclipse
-                        \item Gained experience using Bayesian methods of parameter estimation
-                    \end{itemize}  
-                    
-                {\sl Undergraduate Researcher}: University of California, Santa Cruz \hfill          June 2012 -- Dec 2013\\
-                Extrasolar planet and brown dwarf atmospheric opacity sources with Jonathan Fortney
-                    \begin{itemize}  \itemsep -1pt %reduce space between items
-                        \item Wrote IDL code to calculate, tabulate, and plot weighted mean opacities over a wide range of atmospheric temperatures, pressures, and metallicities\\
-                    \end{itemize}
+                        \item Retrieved exoplanet atmospheric compositions using emission spectra 
+                        \item Applied Bayesian methods for parameter estimation 
+                        \item Calculated and published weighted mean opacities for substellar and planetary atmospheres\\
+                    \end{itemize} 
    
 \section{Teaching \\Experience} 
-                {\sl Research Mentor}: Department of Astronomy, University of Washington \hfill Sept 2016 -- Present\\
+                {\sl Research Mentor}: Department of Astronomy, University of Washington \hfill (Sept 2016 -- Present)\\
                 Advising undergraduate students in exoplanet astronomy and astrobiology research\\
                 \\
                 %    \begin{itemize}  \itemsep -1pt %reduce space between items
                 %        \item Guadalupe Tovar (UW Undergraduate)
                 %    \end{itemize}
-                {\sl Teaching Assistant}: Department of Astronomy, University of Washington   \hfill          Sept 2014 -- June 2015\\
+                {\sl Teaching Assistant}: Department of Astronomy, University of Washington   \hfill          (Sept 2014 -- June 2015)\\
                 Led two biweekly sections for undergraduate students
                     \begin{itemize}  \itemsep -1pt %reduce space between items
                         \item ASTR 101 (Spring 2015; Autumn 2014)
                         \item ASTR 150 (Winter 2015)
                     \end{itemize}  
                 
-                {\sl Math \& Writing Tutor}: Learning Support Services, UCSC   \hfill          Sept 2010 -- June 2012\\
+                {\sl Math \& Writing Tutor}: Learning Support Services, UCSC   \hfill          (Sept 2010 -- June 2012)\\
                 Instructed students in college level mathematics and writing as a group and drop-in tutor\\
-
                  
                                   
 \section{Honors \\ \& Awards}
@@ -118,16 +132,31 @@ Minor in Mathematics\\
                     \item Honors undergraduate thesis in physics (2013)
                     \item University Honor, \textit{cum laude} at University of California, Santa Cruz (2013)\\
                  \end{itemize}  
+                 
+\section{Technical \\Skills} 
+                \begin{itemize}  \itemsep -1pt %reduce space between items
+                    \item Programming in Python, Julia, IDL, \& Fortran
+                    \item Packaging Python code for open-source distribution
+                    \item Bayesian parameter inference and model selection 
+                    \item Version control and collaboration with git \& GitHub
+                    \item Data visualization with Matplotlib, Tableau, \& Bokeh  
+                    \item Writing and typesetting with \LaTeX 
+                    \item Extensive experience with MS Office Suite \\
+                \end{itemize}
 
 \section{Publications} 
                 {\sl First Authored}
-                \begin{benumerate}{3}
+                \begin{benumerate}{4}
+                    \item $^{\star}$\textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P. (2019, $^{\star}$\textit{submitted}). \href{}{``Mirages of a cosmic shoreline: Venus-like clouds as a statistical false positive for exoplanet atmospheric erosion''}. \textit{The Astrophysical Journal Letters}. 
                     \item \textbf{Lustig-Yaeger, J.}, Robinson, T. D., \& Arney, G. (2019). \href{https://doi.org/10.21105/joss.01387}{``\texttt{coronagraph}: Telescope Noise Modeling for Exoplanets in Python''}. \textit{Journal of Open Source Software}, 4(40), 1387.
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P. (2019). \href{https://doi.org/10.3847/1538-3881/ab21e0}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. \textit{The Astronomical Journal}, 158(1), 27.
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., Tovar Mendoza, G., Schwieterman, E. W., Fujii, Y., Luger, R., \&  Robinson, T. D. (2018). \href{https://doi.org/10.3847/1538-3881/aaed3a}{``Detecting Ocean Glint on Exoplanets Using Multiphase Mapping''}. \textit{The Astronomical Journal}, 156(6), 301.
                 \end{benumerate}
                 {\sl Co-Authored}
-                \begin{benumerate}{11}
+                \begin{benumerate}{14}
+                    \item $^{\star}$Leung, M., Meadows, V. S., \& \textbf{Lustig-Yaeger, J.} (2019, $^{\star}$\textit{in prep}). \href{}{``High-Resolution Spectral Discriminants of Ocean Loss for M Dwarf Terrestrial Exoplanets''}. %\textit{The Astrophysical Journal}.
+                    \item $^{\star}$Mansfield, M., Schlawin, E., \textbf{Lustig-Yaeger, J.}, et al. (2019, $^{\star}$\textit{in prep}). \href{}{``Eigenspectra: A Framework for Identifying Spectra from 3D Eclipse Mapping''}. %\textit{The Astrophysical Journal}.
+                    \item $^{\star}$Guzewich, S. D., \textbf{Lustig-Yaeger, J.}, Davis, C. E., Kopparapu, R. K., Way, M. J., \& Meadows, V. S.  (2019, $^{\star}$\textit{submitted}). \href{}{``The Impact of Planetary Rotation Rate on the Reflectance and Thermal Emission Spectrum of Terrestrial Exoplanets Around Sun-like Stars''}. \textit{The Astrophysical Journal}.
                     \item Lincowski, A. P., \textbf{Lustig-Yaeger, J.}, \& Meadows, V. S.  (2019). \href{https://doi.org/10.3847/1538-3881/ab2385}{``Observing Isotopologue Bands in Terrestrial Exoplanet Atmospheres with the James Webb Space Telescope---Implications for Identifying Past Atmospheric and Ocean Loss''}. \textit{The Astronomical Journal}, 158(1), 26.
                     \item Luger, R., Agol, E., Foreman-Mackey, D., Fleming, D. P., \textbf{Lustig-Yaeger, J.}, \& Deitrick, R. (2019).  \href{http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1810.06559}{``STARRY: Analytic Occultation Light Curves''}. \textit{The Astronomical Journal}, 157(2), 64.
                     \item Lincowski, A. P., Meadows, V. S., Crisp, D., Robinson, T. D., Luger, R., \textbf{Lustig-Yaeger, J.}, \& Arney, G.N. (2018). \href{http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1809.07498}{``Evolved Climates and Observational Discriminants for the TRAPPIST-1 Planetary System''}. \textit{The Astrophysical Journal}, 867(1), 76.
@@ -148,13 +177,16 @@ Minor in Mathematics\\
                  
 \section{Presentations} 
                 {\sl Invited Talks}
-                \begin{benumerate}{1}
+                \begin{benumerate}{4}
+                    \item $^{\star}$\textbf{Lustig-Yaeger, J.} \& Meadows, V. S.\ (2019, $^{\star}$\textit{upcoming}). 
+                    \href{}{``The Era of Terrestrial Exoplanet Characterization''}. AGU, AGU-AAS joint exoplanet session, San Francisco, CA, 10 Dec. 
+                    \item $^{\star}$\textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019, $^{\star}$\textit{upcoming}). \href{https://seec.gsfc.nasa.gov/Symposium.html}{``Prospects for Biosignatures for Rocky Planets in the Era of JWST''}. SEEC Symposium 2019, ``Rocky Exoplanets in the Era of JWST: Theory and Observation'', NASA Goddard, Greenbelt, MD, 5 Nov. 
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). \href{https://exoplanets.nasa.gov/exep/events/270/exopag-20/}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. ExoPAG 20, Bellevue, WA, 23 Jun.
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V., Tovar, G., Schwieterman, E., \& Fujii, Y.\ ``Prospects for Mapping Terrestrial Exoplanets with LUVOIR''. Goddard Space Flight Center, October 25, 2017
                 \end{benumerate}
                 {\sl Contributed Talks}
-                \begin{benumerate}{8}
+                \begin{benumerate}{7}
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). \href{https://docs.google.com/viewer?url=https://agu.confex.com/agu/abscicon19/mediafile/ExtendedAbstract/Paper481632/JLY_AbSciCon2019_Abstract3.pdf}{``TRAPPIST-1 and Beyond: Strategies for Characterizing Terrestrial Exoplanets and their Habitability''}. Abstract [202-7] presented at 2019 Astrobiology Science Conference, Bellevue, WA, 24-28 June. 
-                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). \href{https://exoplanets.nasa.gov/exep/events/270/exopag-20/}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. ExoPAG 20, Bellevue, WA, 23 Jun.
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). ``Detecting and Characterizing Terrestrial Atmospheres in the TRAPPIST-1 System with JWST''. TRAPPIST-1 Conference, Li\`ege, Belgium, 11-14 Jun. 
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P.\ (2019). \href{http://adsabs.harvard.edu/abs/2019AAS...23310303L}{``Simulating the Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. American Astronomical Society Meeting Abstracts, 233, \#103.03
                     \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., Tovar, G., Schwieterman, E., W., Fujii, Y., Luger, R., \& Robinson, T. D.\ (2018). \href{https://agu.confex.com/agu/fm18/prelim.cgi/Paper/384157}{``Detecting Oceans on Exoplanets with Next-Generation Telescopes''}. 2018 AGU Fall Meeting, Washington, D.C., 10-14 Dec. P51B-09
