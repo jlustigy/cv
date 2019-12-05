@@ -1,0 +1,7 @@
+Modeling terrestrial exoplanet atmospheres, habitability & biosignatures, and their spectral and temporal observable characteristics. 
+ 
+Developing, testing, and applying a physically rigorous terrestrial exoplanet retrieval code for analyzing observed exoplanet spectra. 
+
+Simulating and analyzing radiative transfer, photochemical, climate, surface mapping, machine learning, and telescope noise models. 
+
+Communicating and presenting research findings in peer reviewed journal articles, at conferences, and to the public. 
