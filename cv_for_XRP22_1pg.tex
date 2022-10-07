@@ -1,0 +1,128 @@
+% LaTeX resume using res.cls
+\documentclass[margin,10pt]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\setlength{\textwidth}{6in} % set width of text portion
+\newcommand{\code}[1]{\texttt{#1}}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[dvipsnames]{xcolor}
+
+\definecolor{MidnightBlue}{RGB}{10,82,131} % This replaces the need for xcolor package
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=MidnightBlue           % color of external links
+}
+
+\usepackage{enumitem}
+\setlist[itemize,1]{leftmargin=\dimexpr 26pt-3mm}
+
+\newenvironment{benumerate}[1]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}
+}{
+    \end{enumerate}
+}
+
+\begin{document}
+
+%% Center the name over the entire width of resume:
+\moveleft.5\hoffset\centerline{\textsc{\Large Jacob Lustig-Yaeger}}
+\moveleft.5\hoffset\centerline{Astronomy \& Astrobiology, PhD}
+%
+%% Draw a horizontal line the whole width of resume:
+\moveleft\hoffset\vbox{\hrule width 0.93\resumewidth height 1pt}
+\vspace{-12pt}
+\hspace{-1in}
+\begin{minipage}[t]{0.93\resumewidth}
+Email: \href{mailto:jacob.lustig-yaeger@jhuapl.edu}{jacob.lustig-yaeger@jhuapl.edu} \hfill GitHub: \href{https://github.com/jlustigy}{jlustigy}\\
+Web: \url{https://jlustigy.github.io/} \hfill ORCID: \href{https://orcid.org/0000-0002-0746-1980}{0000-0002-0746-1980}
+\end{minipage}
+
+
+%% Select character to use as the bullet marker. 
+%% Comment out to get normal dark filled circle bullets
+\def\labelitemi{---}	
+
+\begin{resume}
+
+%\section{Current \\Position}
+%Exoplanet Post Doctoral Fellow \hfill (2020 -- present)\\
+%Johns Hopkins Applied Physics Laboratory \\
+
+\section{Office \\Address}
+11100 Johns Hopkins Rd \\
+Laurel, MD 20723 \\
+United States \\
+
+\section{Education} 
+PhD in Astronomy \& Astrobiology (dual-titled PhD) \hfill (2014 -- 2020) \\
+MS in Astronomy (2016) \\
+University of Washington, Seattle, WA  \\
+\textit{Thesis:} \href{https://digital.lib.washington.edu/researchworks/handle/1773/46370}{``The Detection, Characterization, and Retrieval of Terrestrial Exoplanet Atmospheres''} \\
+\textit{Advisor:} Victoria Meadows 
+
+BS in Physics (Honors), Minor in Mathematics \hfill (2009 -- 2013) \\
+University of California, Santa Cruz, CA \\
+\textit{Advisor:} Jonathan Fortney \\
+
+%\section{Research \\Interests}
+%                \begin{itemize}  \itemsep -1pt %reduce space between items
+%                        \item Characterizing terrestrial exoplanets for habitability and signs of life 
+%                        \item Retrieving terrestrial planet atmospheres using Bayesian inference 
+%                        \item Modeling telescope sensitivity to motivate future exoplanet science cases 
+%                        \item Developing novel methods to detect exoplanet habitability and biosignatures \\
+%                    \end{itemize}
+
+\section{Research \\Experience} 
+                {\sl Post Doctoral Fellow}: The Johns Hopkins Applied Physics Laboratory \hfill (2020 -- present)\\
+                Terrestrial exoplanet atmospheres, theory \& observation, mission concepts
+                
+                {\sl Graduate Research Assistant}: Virtual Planetary Laboratory   \hfill (2014 -- 2020)\\
+                Terrestrial exoplanets, their atmospheres, habitability \& biosignatures
+                    %\begin{itemize}  \itemsep -1pt %reduce space between items
+                    %    \item Developed, tested, and applied a physically rigorous terrestrial exoplanet retrieval model  
+                    %    \item Simulated and analyzed radiative transfer, photochemical, climate, telescope, surface mapping, and machine learning models
+                    %\end{itemize} 
+
+                {\sl Undergraduate \& Postbaccalaureate Researcher}: University of California, Santa Cruz \hfill          (2012 -- 2014)\\
+                Hot Jupiter \& brown dwarf atmospheres, opacity sources, and atmospheric retrieval \\
+                    %\begin{itemize}  \itemsep -1pt %reduce space between items
+                    %    \item Retrieved exoplanet atmospheric compositions using emission spectra 
+                    %    \item Applied Bayesian methods for parameter estimation 
+                    %    \item Calculated and published weighted mean opacities for substellar and planetary atmospheres\\
+                    %\end{itemize} 
+                                  
+\section{Honors, Awards, \& Funded Proposals}
+                 \begin{itemize}  \itemsep -1pt %reduce space between items
+                    %\item Astrobiology Fellow at University of Washington Astrobiology Program (2014)
+                    \item \textbf{JWST Cycle 1 Co-PI:} \href{https://www.stsci.edu/jwst/science-execution/program-information?id=1981}{``Tell Me How I'm Supposed To Breathe With No Air: Measuring the Prevalence and Diversity of M-Dwarf Planet Atmospheres''} (2021)
+                    \item \textbf{NASA Group Achievement Award:} LUVOIR Mission Concept Study Team (2019)
+                    \item Honors undergraduate thesis in physics (2013)
+                    \item University Honor, \textit{cum laude} at University of California, Santa Cruz (2013)\\
+                 \end{itemize}  
+
+\section{Selected Publications} 
+                %{\sl First Authored}
+                \begin{itemize}
+                    \item \textbf{Lustig-Yaeger, J.}, Sotzen, K. S., Stevenson, K. B., Luger, R., May, E. M., Mayorga, L. C., Mandt, K., \& Izenberg, N. R. (2022). \href{https://ui.adsabs.harvard.edu/abs/2022arXiv220200701L/abstract}{``Hierarchical Bayesian Atmospheric Retrieval Modeling for Population Studies of Exoplanet Atmospheres: A Case Study on the Habitable Zone''}. \textit{The Astronomical Journal}.
+                    \item \textbf{Lustig-Yaeger, J.}, Stevenson, K. B., Mayorga, L. C., Sotzen, K. S., May, E. M., Izenberg, N. R., \& Mandt, K. (2021). \href{https://doi.org/10.3847/2041-8213/ac2cc2}{``Retrieving Exoplanet Atmospheres using Planetary Infrared Excess: Prospects for the Night side of WASP-43 b and other Hot Jupiters''}. \textit{The Astrophysical Journal Letters}, 921(1), L4.
+                    %\item Mansfield, M., Schlawin, E., \textbf{Lustig-Yaeger, J.}, et al. (2020). \href{https://ui.adsabs.harvard.edu/abs/2020MNRAS.499.5151M/abstract}{``Eigenspectra: A Framework for Identifying Spectra from 3D Eclipse Mapping''}. \textit{Monthly Notices of the Royal Astronomical Society}.
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P. (2019). \href{https://doi.org/10.3847/2041-8213/ab5965}{``A Mirage of the Cosmic Shoreline: Venus-like Clouds as a Statistical False Positive for Exoplanet Atmospheric Erosion''}. \textit{The Astrophysical Journal Letters}, 887(1), L11. 
+                    \item \textbf{Lustig-Yaeger, J.}, Robinson, T. D., \& Arney, G. (2019). \href{https://doi.org/10.21105/joss.01387}{``\texttt{coronagraph}: Telescope Noise Modeling for Exoplanets in Python''}. \textit{Journal of Open Source Software}, 4(40), 1387.
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., \& Lincowski, A. P. (2019). \href{https://doi.org/10.3847/1538-3881/ab21e0}{``The Detectability and Characterization of the TRAPPIST-1 Exoplanet Atmospheres with JWST''}. \textit{The Astronomical Journal}, 158(1), 27.
+                    \item \textbf{Lustig-Yaeger, J.}, Meadows, V. S., Tovar Mendoza, G., Schwieterman, E. W., Fujii, Y., Luger, R., \&  Robinson, T. D. (2018). \href{https://doi.org/10.3847/1538-3881/aaed3a}{``Detecting Ocean Glint on Exoplanets Using Multiphase Mapping''}. \textit{The Astronomical Journal}, 156(6), 301.
+                    \item Luger, R., \textbf{Lustig-Yaeger, J.}, \& Agol, E. (2017).  \href{http://adsabs.harvard.edu/abs/2017ApJ...851...94L}{``Planet-Planet Occultations in TRAPPIST-1 and Other Exoplanet Systems''}. \textit{The Astrophysical Journal}, 851(2), 94.
+                    %\item Fujii, Y., \textbf{Lustig-Yaeger, J.}, \& Cowan, N. B. (2017). \href{http://adsabs.harvard.edu/abs/2017arXiv170804886F}{``Rotational Spectral Unmixing of Exoplanets: Degeneracies between Surface Colors and Geography''}. \textit{The Astronomical Journal}, 154(5), 189.
+                \end{itemize}
+
+\end{resume}
+\end{document}
